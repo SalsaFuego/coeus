@@ -1,0 +1,14 @@
+{% extends "../core/layout.html" %}
+
+{% block title %}
+Salsa Fuego - Products
+{% endblock %}
+
+{% block body %}
+  <h1>Flavors</h1>
+  <ul>
+    {% for product in products %}
+      <li><a href="{% url 'product_details' product.slug %}">{{ product }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

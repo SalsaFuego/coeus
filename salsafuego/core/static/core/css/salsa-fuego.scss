@@ -1,0 +1,306 @@
+// Custom variables
+@import "variables";
+
+
+
+// HTML Elements
+body {
+  background-color: $salsa-fuego-tan-light;
+}
+a,
+	h1, h2, h3, h4, h5, h6,
+	.h1, .h2, .h3, .h4, .h5, .h6,
+		label,
+			li,
+				ol,
+					p,
+						ul {
+  color: $salsa-fuego-white-light;
+}
+
+
+
+// Misc Styles
+@media (min-width: 992px) {
+	.current-page {
+	  position: relative;
+		&:after {
+		  content: '';
+		  position: absolute;
+		  top: 77%;
+		  height: 2px;
+		  width: 88%;
+			left: 6%;
+		  background-color: $salsa-fuego-white-light;
+		}
+	}
+}
+.width-5 {width: 5%;}
+.width-10 {width: 10%;}
+.width-15 {width: 15%;}
+.width-20 {width: 20%;}
+.width-25 {width: 25%;}
+.width-30 {width: 30%;}
+.width-35 {width: 35%;}
+.width-40 {width: 40%;}
+.width-45 {width: 45%;}
+.width-50 {width: 50%;}
+.width-55 {width: 55%;}
+.width-60 {width: 60%;}
+.width-65 {width: 65%;}
+.width-70 {width: 70%;}
+.width-75 {width: 75%;}
+.width-80 {width: 80%;}
+.width-85 {width: 85%;}
+.width-90 {width: 90%;}
+.width-95 {width: 95%;}
+.width-100 {width: 100%;}
+
+
+
+// Navbar Styles
+.nav-item {
+	font-family: $secondary-font;
+	font-size: 1.25rem;
+	letter-spacing: .05rem;
+}
+
+
+
+// Torn Effect Styles
+.torn-paper-effect {
+	width: 100%;
+}
+.torn-paper-svg {
+	width: 100%;
+}
+
+
+
+// Accordion Menu Styles
+.accordion-menu {
+	border-bottom: none;
+	border-left: 1px solid $salsa-fuego-black-dark;
+	border-top: 1px solid $salsa-fuego-black-dark;
+	border-right: 1px solid $salsa-fuego-black-dark;
+}
+.panel-header { // Style the divs that are used to open and close the accordion panel
+	background-color: $salsa-fuego-white-light;
+	color: $salsa-fuego-black-dark;
+	cursor: pointer;
+	outline: none;
+	padding: 1.25rem;
+	text-align: left;
+	transition-duration: 0.4s;
+	width: auto;
+	&:after {
+		color: transparent;
+		content: '\002795'; // Unicode character for heavy plus sign (➕)
+		font-size: 1rem;
+	  text-shadow: 0 0 0 $salsa-fuego-black-dark;
+		float: right;
+		margin-left: .25rem;
+	}
+	&:hover {
+		background-color: $salsa-fuego-black-dark;
+		color: transparent;
+	  text-shadow: 0 0 0 $salsa-fuego-white-light;
+		&:after {
+	  	text-shadow: 0 0 0 $salsa-fuego-white-light;
+		}
+	}
+}
+.panel-content { // Style the accordion panel. Note: hidden by default
+	background-color: $salsa-fuego-white-light;
+	border-bottom: 1px solid $salsa-fuego-black-dark;
+	max-height: 0;
+	overflow: scroll;
+	padding: 0;
+	transition-property: max-height;
+	transition-duration: .4s;
+	transition-timing-function: ease-out;
+	p {
+		color: $salsa-fuego-black-dark;
+		margin: 0;
+		padding: 1rem 1.25rem;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			margin: 0;
+			padding: 1rem 1.25rem;
+			span {
+				display: block;
+				&:nth-child(1) {
+					font-weight: 700;
+				}
+			}
+			&:nth-child(odd) {
+				background: $salsa-fuego-white-light;
+				color: $salsa-fuego-black-dark;
+			}
+			&:nth-child(even) {
+				background: $salsa-fuego-black-light;
+				color: $salsa-fuego-white-light;
+			}
+		}
+	}
+}
+.current_panel { // Add a background color to the div when clicked or mouse over
+	background-color: $salsa-fuego-black-dark;
+	color: transparent;
+  text-shadow: 0 0 0 $salsa-fuego-white-light;
+	&:after {
+		content: '\002796'; // Unicode character for heavy minus sign (➖)
+	  color: transparent;
+	  text-shadow: 0 0 0 $salsa-fuego-white-light;
+	}
+}
+
+
+
+// Footer Styles
+footer {
+	background-color: $salsa-fuego-tan-light;
+		a,
+			h1, h2, h3, h4, h5, h6,
+				p {
+	  color: $salsa-fuego-black-dark;
+	}
+	a:hover {
+	  color: $salsa-fuego-black-light;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0 0 .5rem;
+	}
+	p {
+		font-size: .75rem;
+		margin: 0;
+	}
+}
+
+
+
+// Slideshow Styles
+.slide-container {
+  position: relative;
+  .slide img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+.prev,
+.next {
+	color: transparent;
+  cursor: pointer;
+	margin-top: -3rem;
+  position: absolute;
+	text-shadow: 0 0 0 $salsa-fuego-white-light;
+  top: 50%;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 2rem;
+	&:hover {
+		&:after {
+	  	text-shadow: 0 0 0 $salsa-fuego-black-dark;
+		}
+	}
+}
+.prev {
+	left: 0;
+	&:after {
+		content: '\00276E'; // Unicode character for heavy left-pointing angle quotation mark ornament (❮)
+	}
+}
+.next {
+  right: 0;
+	&:after {
+		content: '\00276F'; // Unicode character for heavy right-pointing angle quotation mark ornament (❯)
+	}
+}
+.slideshow-navigation {
+  text-align: center;
+  .slideshow-navigation-dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 .125rem;
+    background-color: $salsa-fuego-white-light;
+    border-radius: 50%;
+    display: inline-block;
+		&:hover {
+			background-color: $salsa-fuego-black-dark;
+		}
+  }
+}
+.current_slide {
+	background-color: $salsa-fuego-black-dark !important;
+}
+
+
+
+// Custom Carousel Content
+.custom-carousel-content {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 70%;
+  @media (min-width: 576px) {
+    // small styles go here
+  }
+  @media (min-width: 768px) {
+    // medium styles go here
+    flex-wrap: nowrap;
+  }
+  @media (min-width: 992px) {
+    // large styles go here
+  }
+  @media (min-width: 1200px) {
+    // extra large styles go here
+  }
+  div {
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+    h1 {
+      // header styles go here
+      font-size: 2rem;
+    }
+    p {
+      // paragraph styles go here
+    }
+    img {
+      // image styles go here
+      display: block;
+      margin: 0 auto;
+      max-width: 250px;
+      width:  100%;
+    }
+    @media (min-width: 576px) {
+      // small styles go here
+    }
+    @media (min-width: 768px) {
+      // medium styles go here
+      padding: 1rem 1rem;
+      width: 50%;
+      text-align: left;
+      img {
+        margin: 0 0 0 auto;
+      }
+    }
+    @media (min-width: 992px) {
+      // large styles go here
+      padding: 1rem 2rem;
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+    @media (min-width: 1200px) {
+      // extra large styles go here
+    }
+  }
+}
