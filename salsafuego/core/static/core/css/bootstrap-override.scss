@@ -78,11 +78,9 @@ h1, h2, h3, h4, h5, h6,
   border-color: rgba($salsa-fuego-white-light, 0.1);
 }
 
-// Special color variable declaration
-$salsa-fuego-white-light-rgb: "255, 254, 249";
-
+// RGB code for $salsa-fuego-white-light is "255, 254, 249"
 .navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(#{$salsa-fuego-white-light-rgb}, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 254, 249, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-dark .navbar-text {
@@ -95,18 +93,6 @@ $salsa-fuego-white-light-rgb: "255, 254, 249";
 
 .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
   color: $salsa-fuego-white-light;
-}
-
-
-// Background styles
-.bg-dark {
-	background-color: rgba($salsa-fuego-green-dark, 1.0) !important;
-}
-
-a.bg-dark:hover, a.bg-dark:focus,
-button.bg-dark:hover,
-button.bg-dark:focus {
-	background-color: rgba($salsa-fuego-green-light, 1.0) !important;
 }
 
 
@@ -757,13 +743,6 @@ select.form-control:focus::-ms-value {
 }
 
 
-// Custom styles that use Bootstrap SASS variables
-.content-wrapper {
-  padding-bottom: ($spacer * 5);
-  padding-top: ($spacer * 2);
-}
-
-
 // headings
 h1, .h1 {
   font-size: 2rem;
@@ -841,4 +820,15 @@ html {
   html {
     // font-size: 1.6rem;
   }
+}
+
+
+
+// Jumbotron
+.jumbotron {
+  background-color: inherit;
+}
+
+.jumbotron-fluid {
+  padding: 0;
 }

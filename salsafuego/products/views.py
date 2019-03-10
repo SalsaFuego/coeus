@@ -10,6 +10,9 @@ def products(request):
     }
     return render(request, "products/index.html", context)
 
+# def product_collection(request, collection):
+#     return render(request, "products/product_collection.html", context)
+
 def product_details(request, slug):
     try:
         product = Product.objects.get(slug=slug)

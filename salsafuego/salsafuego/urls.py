@@ -20,9 +20,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', include('core.urls')),
-    path('accessories/', include('accessories.urls')),
-    path('apparel/', include('apparel.urls')),
+    # path('accessories/', include('accessories.urls')),
+    # path('apparel/', include('apparel.urls')),
     path('flavors/', include('products.urls')),
+    path('merch/', include('merch.urls')),
     path('recipes/', include('recipes.urls')),
     path('admin/', admin.site.urls),
 ]

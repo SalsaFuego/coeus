@@ -1,40 +1,32 @@
-// Custom variables
+// *******************************
+// IMPORT CUSTOM SASS VARIABLES **
+// *******************************
 @import "variables";
 
 
+
+// ****************
+// GLOBAL STYLES **
+// ****************
 
 // HTML Elements
 body {
   background-color: $salsa-fuego-tan-light;
 }
 a,
-	h1, h2, h3, h4, h5, h6,
-	.h1, .h2, .h3, .h4, .h5, .h6,
+  h1, h2, h3, h4, h5, h6,
 		label,
 			li,
 				ol,
 					p,
 						ul {
-  color: $salsa-fuego-white-light;
-}
-
-
-
-// Misc Styles
-@media (min-width: 992px) {
-	.current-page {
-	  position: relative;
-		&:after {
-		  content: '';
-		  position: absolute;
-		  top: 77%;
-		  height: 2px;
-		  width: 88%;
-			left: 6%;
-		  background-color: $salsa-fuego-white-light;
-		}
+  color: $salsa-fuego-black-dark;
+	a:hover {
+	  color: $salsa-fuego-black-light;
 	}
 }
+
+// Misc Styles
 .width-5 {width: 5%;}
 .width-10 {width: 10%;}
 .width-15 {width: 15%;}
@@ -58,14 +50,9 @@ a,
 
 
 
-// Navbar Styles
-.nav-item {
-	font-family: $secondary-font;
-	font-size: 1.25rem;
-	letter-spacing: .05rem;
-}
-
-
+// ****************
+// UNUSED STYLES **
+// ****************
 
 // Torn Effect Styles
 .torn-paper-effect {
@@ -74,8 +61,6 @@ a,
 .torn-paper-svg {
 	width: 100%;
 }
-
-
 
 // Accordion Menu Styles
 .accordion-menu {
@@ -161,27 +146,179 @@ a,
 
 
 
-// Footer Styles
-footer {
-	background-color: $salsa-fuego-tan-light;
-		a,
-			h1, h2, h3, h4, h5, h6,
-				p {
-	  color: $salsa-fuego-black-dark;
-	}
-	a:hover {
-	  color: $salsa-fuego-black-light;
-	}
-	h1, h2, h3, h4, h5, h6 {
-		margin: 0 0 .5rem;
-	}
-	p {
-		font-size: .75rem;
-		margin: 0;
-	}
+// ******************
+// CORE APP STYLES **
+// ******************
+
+// Header Styles
+header {
+  .tagline-account-details {
+    font-size: .75rem;
+    margin: .5rem 0;
+    .tagline {
+      text-align: left;
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .account-details {
+      text-align: right;
+      a {
+        &:first-child {
+          margin-right: .5rem;
+        }
+        &:last-child {
+          margin-left: .5rem;
+        }
+    	}
+    }
+  }
+  nav.primary {
+    background-color: $salsa-fuego-green-dark;
+    .nav-item {
+    	font-family: $secondary-font;
+    	font-size: 1.25rem;
+    	letter-spacing: .05rem;
+    	.current-page {
+        @media (min-width: 576px) {
+          // small styles go here
+        }
+        @media (min-width: 768px) {
+          // medium styles go here
+        }
+        @media (min-width: 992px) {
+          // large styles go here
+      	  position: relative;
+      		&:after {
+      		  content: '';
+      		  position: absolute;
+      		  top: 77%;
+      		  height: 2px;
+      		  width: 88%;
+      			left: 6%;
+      		  background-color: $salsa-fuego-white-light;
+      		}
+        }
+        @media (min-width: 1200px) {
+          // extra large styles go here
+        }
+    	}
+    }
+  }
 }
 
-
+// Footer Styles
+footer {
+  .contact-social-newsletter {
+    background-color: $salsa-fuego-green-dark;
+    padding: 1.5rem 0;
+    a {
+      color: $salsa-fuego-white-light;
+      &:hover {
+        color: $salsa-fuego-white-light;
+      }
+    }
+  	h1, h2, h3, h4, h5, h6 {
+      color: $salsa-fuego-white-light;
+  		margin: 0 0 .5rem;
+  	}
+  	p {
+      color: $salsa-fuego-white-light;
+  		font-size: .875rem;
+  		margin: 0;
+  	}
+    .contact {
+      text-align: center;
+      line-height: auto;
+      a:hover {
+        text-decoration: underline;
+      }
+      @media (min-width: 576px) {
+        // small styles go here
+        line-height: 38px;
+      }
+      @media (min-width: 768px) {
+        // medium styles go here
+      }
+      @media (min-width: 992px) {
+        // large styles go here
+      }
+      @media (min-width: 1200px) {
+        // extra large styles go here
+      }
+    }
+    .social {
+      margin: 1.5rem 0;
+      text-align: center;
+      a:hover {
+        text-decoration: none;
+      }
+      img {
+        margin: 0 .25rem;
+      }
+      @media (min-width: 576px) {
+        // small styles go here
+        margin: 0;
+        img {
+          margin: .25rem;
+        }
+      }
+      @media (min-width: 768px) {
+        // medium styles go here
+      }
+      @media (min-width: 992px) {
+        // large styles go here
+      }
+      @media (min-width: 1200px) {
+        // extra large styles go here
+      }
+    }
+    .newsletter {
+      margin-top: 0;
+      text-align: center;
+      @media (min-width: 576px) {
+        // small styles go here
+        margin-top: 1.5rem;
+      }
+      @media (min-width: 768px) {
+        // medium styles go here
+        margin-top: 1.5rem;
+      }
+      @media (min-width: 992px) {
+        // large styles go here
+        margin-top: 0;
+      }
+      @media (min-width: 1200px) {
+        // extra large styles go here
+      }
+    }
+  }
+  nav.secondary {
+    text-align: center;
+    ul {
+      font-size: .75rem;
+      list-style: none;
+      margin: 1rem 0;
+      padding: 0;
+      li {
+        display: inline;
+        a {
+          margin: 0 .5rem;
+        }
+      }
+    }
+  }
+  .copyright {
+    margin: 0 0 1rem;
+    padding: 0;
+    text-align: center;
+  	p {
+  		font-size: .75rem;
+  		margin: 0;
+  	}
+  }
+}
 
 // Slideshow Styles
 .slide-container {
@@ -238,8 +375,6 @@ footer {
 .current_slide {
 	background-color: $salsa-fuego-black-dark !important;
 }
-
-
 
 // Custom Carousel Content
 .custom-carousel-content {
@@ -301,6 +436,324 @@ footer {
     }
     @media (min-width: 1200px) {
       // extra large styles go here
+    }
+  }
+}
+
+
+
+// *********************
+// PRODUCT APP STYLES **
+// *********************
+
+// Product Filter Styles
+#product-filter {
+  border: none;
+  width: auto;
+  @media (min-width: 576px) {
+    // small styles go here
+  }
+  @media (min-width: 768px) {
+    // medium styles go here
+    border-right: 1px solid $salsa-fuego-black-dark;
+  }
+  @media (min-width: 992px) {
+    // large styles go here
+  }
+  @media (min-width: 1200px) {
+    // extra large styles go here
+  }
+  // Apply styles to all .filter-title elements
+  .filter-title {
+    padding: 0;
+  // Override styles of all but the first instance of .filter-title element
+  }
+  .filter-title ~ .filter-title {
+    padding: 2rem 0 0;
+  }
+}
+
+// Product Tile Styles
+.product-tile {
+  padding: 0 0 15px;
+  img {
+    width: 100%;
+  }
+  h5 {
+    margin: 0;
+    padding: 15px 0 0;
+  }
+  p {
+    margin: 0;
+    padding: 15px 0 0;
+  }
+}
+
+// Product Image Styles
+#product-image {
+  @media (min-width: 576px) {
+    // small styles go here
+  }
+  @media (min-width: 768px) {
+    // medium styles go here
+  }
+  @media (min-width: 992px) {
+    // large styles go here
+  }
+  @media (min-width: 1200px) {
+    // extra large styles go here
+  }
+  img {
+    width: 100%;
+  }
+}
+
+// Product Details Styles
+#product-details {
+  @media (min-width: 576px) {
+    // small styles go here
+  }
+  @media (min-width: 768px) {
+    // medium styles go here
+  }
+  @media (min-width: 992px) {
+    // large styles go here
+  }
+  @media (min-width: 1200px) {
+    // extra large styles go here
+  }
+  #product-name {
+    margin-bottom: .5rem;
+  }
+  #product-price {
+    margin-bottom: 2rem;
+    h3 {
+      color: $salsa-fuego-black-light;
+    }
+  }
+  #product-variants {
+    margin-bottom: .5rem;
+  }
+  #product-quantity {
+    margin-bottom: 2rem;
+    input {
+      max-width: 4rem;
+      width: 100%;
+    }
+  }
+  #product-button {
+    margin-bottom: 2rem;
+  }
+  #product-accordion {
+    .card {
+      background-color: $salsa-fuego-white-light;
+      border: 1px solid rgba($salsa-fuego-black-dark, .25);
+      border-radius: 0;
+      .card-header {
+        background-color: rgba($salsa-fuego-black-dark, .125);
+        border: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        h5 {
+          margin: 0;
+          padding: 0;
+          .btn {
+            border: 0;
+            margin: 0;
+            padding: 1.25rem;
+            &:focus {
+              box-shadow: none;
+            }
+          }
+          .btn-link {
+            color: $salsa-fuego-black-dark;
+          }
+        }
+      }
+      .card-body {
+        border-top: 1px solid rgba($salsa-fuego-black-dark, .25);
+        margin: 0;
+        padding: 1.25rem;
+      }
+    }
+    #product-description {
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    #product-ingredients {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    #product-nutrition-facts {
+      ul {
+        list-style: none;
+        margin: 0;
+        overflow-x: hidden;
+        padding: 0;
+        width: 100%;
+        li {
+          span {
+            background: white;
+          }
+          span:first-child {
+            padding-right: .5rem;
+          }
+          span:last-child {
+            float: right;
+            padding-left: .5rem;
+          }
+          &:not(.nested):before {
+            content: " . . . . . . . . . . . . . . . . . . . ."
+                     " . . . . . . . . . . . . . . . . . . . ."
+                     " . . . . . . . . . . . . . . . . . . . ."
+                     " . . . . . . . . . . . . . . . . . . . .";
+            float: left;
+            white-space: nowrap;
+            width: 0;
+          }
+        }
+        li.nested {
+          ul {
+            list-style: none;
+            padding: 0 0 0 1.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// ********************
+// RECIPE APP STYLES **
+// ********************
+
+// Hero Styles
+.hero {
+  img {
+    width: 100%;
+  }
+}
+
+// Recipe Details Styles
+.recipe-details {
+  .servings,
+  .prep-time,
+  .cook-time {
+    display: inline-block;
+    img {
+      display: inline-block;
+      max-height: 1.5rem;
+      max-width: 1.5rem;
+      width: 100%;
+    }
+    p {
+      display: inline-block;
+      margin: 0 0 0 .125rem;
+      line-height: 1.5rem;
+      padding: 0;
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+  .prep-time,
+  .cook-time {
+    margin-left: 1rem;
+  }
+}
+
+.print-recipe {
+  img {
+    display: inline-block;
+    max-height: 1.5rem;
+    max-width: 1.5rem;
+    width: 100%;
+  }
+  a {
+    color: $salsa-fuego-black-dark;
+    display: inline-block;
+    margin: 0 0 0 .125rem;
+    line-height: 1.5rem;
+    &:hover {
+      color: $salsa-fuego-black-light;
+    }
+  }
+}
+
+.ingredients-preparation {
+  .ingredients {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      // Apply styles to all <li> elements
+      li {
+        border-top: none;
+        padding: .5rem 0;
+      }
+      // Override styles of all but the first instance of <li> element
+      li ~ li {
+        border-top: 1px solid rgba($salsa-fuego-black-dark, .25);
+      }
+    }
+  }
+  .preparation {
+
+  }
+  .associated-product {
+    .product-label {
+      img {
+        width: 100%;
+      }
+    }
+    .product-name-description-button {
+      .product-name {
+
+      }
+      .product-description {
+
+      }
+      .product-button {
+
+      }
+    }
+  }
+}
+
+
+
+// ********************
+// UNASSIGNED STYLES **
+// ********************
+
+// Breadcrumb Styles
+#breadcrumb {
+  padding: 1rem 0;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline;
+      a {
+        color: rgba($salsa-fuego-black-dark, .625);
+      }
+      &:last-child a {
+        color: $salsa-fuego-black-dark;
+      }
+    }
+    li+li:before {
+      content: "/";
+      display: inline;
+      margin: 0 .25rem;
     }
   }
 }

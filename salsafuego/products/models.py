@@ -67,3 +67,16 @@ class Ingredient(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+
+
+
+# class ProductCollection(models.Model):
+#     product = models.ManyToManyField(
+#         Product,
+#         blank=True,
+#         related_name="collection"
+#     )
+#     name = models.CharField(unique=True, max_length=64)
+#
+#     def __str__(self):
+#         return f"{self.name}"

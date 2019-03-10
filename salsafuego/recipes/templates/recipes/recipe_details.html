@@ -1,18 +1,124 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Recipe {{ recipe.name }}</h1>
-    <p>{{ recipe.servings }}</p>
-    <p>{{ recipe.product.product_image }}</p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <h2>Associated Product {{ recipe.product }}</h2>
-    <img src="http://127.0.0.1:8000{{ recipe.product.product_image.url }}" >
-  </body>
-</html>
+{% extends "core/layout.html" %}
+
+{% load static %}
+
+{% block title %}
+Salsa Fuego - {{ recipe.name }}
+{% endblock %}
+
+{% block body %}
+<section id="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <ul>
+          <li>
+            <a href="{% url 'index' %}">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'recipes' %}">Recipes</a>
+          </li>
+          <li>
+            <a href="{% url 'recipe_details' recipe.slug %}">{{ recipe }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recipe-details">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>{{ recipe.name }}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="servings">
+          <img src="{% static 'recipes/images/salsa-fuego-servings-icon.svg' %}" alt="" />
+          <p>Servings: <span>{{ recipe.servings }}</span></p>
+        </div>
+        <div class="prep-time">
+          <img src="{% static 'recipes/images/salsa-fuego-prep-time-icon.svg' %}" alt="" />
+          <p>Prep Time: <span>10</span></p>
+        </div>
+        <div class="cook-time">
+          <img src="{% static 'recipes/images/salsa-fuego-cook-time-icon.svg' %}" alt="" />
+          <p>Cook Time: <span>10</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <img src="https://via.placeholder.com/1600x900/FFFF00/000000" alt="" />
+    </div>
+  </div>
+</section>
+
+<section class="ingredients-preparation">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-3">
+        <div class="ingredients">
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 ½ tablespoons TABASCO® Original Red Sauce</li>
+            <li>3 Avocados From Mexico, halved and pitted</li>
+            <li>1 tablespoon lime juice</li>
+            <li>½ teaspoon ground cumin</li>
+            <li>2 teaspoons salt</li>
+            <li>¼ cup red onion, diced</li>
+            <li>1 ½ cups frozen corn kernels, defrosted and liquid drained</li>
+            <li>1 tablespoon garlic, minced</li>
+            <li>1 tablespoon olive oil or vegetable oil</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-sm-9">
+        <div class="row preparation">
+          <div class="col">
+            <h3>Preparation</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend pulvinar cursus. Donec nec maximus nulla. Sed fermentum auctor ex, sit amet commodo massa porta egestas. Sed pretium sed mi in malesuada. Cras iaculis felis ligula, sed eleifend erat mollis eget. Integer aliquam fringilla dapibus. Praesent diam ante, vestibulum viverra commodo pulvinar, sollicitudin non lorem. Nunc a justo efficitur, blandit magna eget, dapibus arcu. Mauris a lorem varius, aliquam diam vitae, tempus metus. Etiam eu quam eget ipsum rhoncus consequat ut nec magna. Etiam pulvinar, libero quis porta sagittis, ligula leo tincidunt urna, non dignissim arcu purus in turpis. Nunc dapibus eros id vulputate commodo. Praesent nisi tellus, cursus sit amet eros pretium, tincidunt mollis nisi. Proin bibendum fringilla diam non lacinia. Morbi eget arcu sit amet mauris blandit maximus.</p>
+            <h5>You will need:</h5>
+          </div>
+        </div>
+        <div class="row associated-product">
+          <div class="col-3 product-label">
+            <!-- Note: Create a field for the center panel of the bottle label -->
+            <img src="{{ recipe.product.product_image.url }}" alt="" />
+          </div>
+          <div class="col-9 product-name-description-button">
+            <div class="product-name">
+              <h5>{{ recipe.product.name }}</h5>
+            </div>
+            <div class="product-description">
+              <p>{{ recipe.product.description }}</p>
+            </div>
+            <div class="product-button">
+              <button type="submit" class="btn btn-primary">Add to Cart</button>
+              <button type="submit" class="btn btn-outline-primary">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="print-recipe">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="{% static 'recipes/images/salsa-fuego-print-icon.svg' %}" alt="" />
+        <a href="#" title="Print Recipe">Print Recipe</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -10,6 +10,9 @@ def recipes(request):
     }
     return render(request, "recipes/index.html", context)
 
+# def recipe_collection(request):
+#     return render(request, "recipes/recipe_collection.html", context)
+
 def recipe_details(request, slug):
     try:
         recipe = Recipe.objects.get(slug=slug)

@@ -1,15 +1,209 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Recipes</h1>
-    <ul>
-      {% for recipe in recipes %}
-        <li><a href="{% url 'recipe_details' recipe.slug %}">{{ recipe }}</a></li>
-      {% endfor %}
-    </ul>
-  </body>
-</html>
+{% extends "../core/layout.html" %}
+
+{% load static %}
+
+{% block title %}
+Salsa Fuego - Recipes
+{% endblock %}
+
+{% block body %}
+<section id="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <ul>
+          <li>
+            <a href="{% url 'index' %}">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'recipes' %}">Recipes</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <img src="https://via.placeholder.com/1600x900/FFFF00/000000" alt="" />
+    </div>
+  </div>
+</section>
+
+<section>
+	<div class="container">
+		<div class="row">
+      <div class="col">
+        <h1>Recipes</h1>
+        <ul>
+          {% for recipe in recipes %}
+            <li><a href="{% url 'recipe_details' recipe.slug %}">{{ recipe }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+	<div class="container">
+		<div class="row">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Recipe Name</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus finibus mi, quis euismod diam euismod id.</p>
+            <button type="button" class="btn btn-primary">
+              View recipe
+            </button>
+          </div>
+          <div class="card-footer">
+            <img src="{% static 'core/images/el-mariachi.svg' %}" style="height: 2rem; width: 2rem;" />
+            <small>Sauce name</small>
+          </div>
+        </div>
+			</div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Recipe Name</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button type="button" class="btn btn-primary">
+              View recipe
+            </button>
+          </div>
+          <div class="card-footer">
+            <img src="{% static 'core/images/el-isleno.svg' %}" style="height: 2rem; width: 2rem;" />
+            <small>Sauce name</small>
+          </div>
+        </div>
+			</div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Recipe Name</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button type="button" class="btn btn-primary">
+              View recipe
+            </button>
+          </div>
+          <div class="card-footer">
+            <img src="{% static 'core/images/el-baquero.svg' %}" style="height: 2rem; width: 2rem;" />
+            <small>Sauce name</small>
+          </div>
+        </div>
+			</div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Recipe Name</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button type="button" class="btn btn-primary">
+              View recipe
+            </button>
+          </div>
+          <div class="card-footer">
+            <img src="{% static 'core/images/el-isleno.svg' %}" style="height: 2rem; width: 2rem;" />
+            <small>Sauce name</small>
+          </div>
+        </div>
+			</div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card">
+          <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Recipe Name</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus finibus mi, quis euismod diam euismod id.</p>
+            <button type="button" class="btn btn-primary">
+              View recipe
+            </button>
+          </div>
+          <div class="card-footer">
+            <img src="{% static 'core/images/el-mariachi.svg' %}" style="height: 2rem; width: 2rem;" />
+            <small>Sauce name</small>
+          </div>
+        </div>
+			</div>
+		</div>
+    <div class="row">
+      <div class="col-9">
+        <h3>Category Name</h3>
+      </div>
+      <div class="col-3">
+        <a href="#" title="">View all Category Names &#x25B8;</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+				<div class="card-deck">
+					<div class="card">
+					  <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+					  <div class="card-body">
+					    <h5 class="card-title">Recipe Name</h5>
+					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus finibus mi, quis euismod diam euismod id.</p>
+							<button type="button" class="btn btn-primary">
+								View recipe
+							</button>
+					  </div>
+				    <div class="card-footer">
+							<img src="{% static 'core/images/el-mariachi.svg' %}" style="height: 2rem; width: 2rem;" />
+				      <small>Sauce name</small>
+				    </div>
+					</div>
+          <div class="w-100 d-none my-0 d-sm-none my-sm-0 d-md-none my-md-0 d-lg-none my-lg-0"></div>
+					<div class="card">
+					  <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+					  <div class="card-body">
+					    <h5 class="card-title">Recipe Name</h5>
+					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<button type="button" class="btn btn-primary">
+								View recipe
+							</button>
+					  </div>
+				    <div class="card-footer">
+							<img src="{% static 'core/images/el-bucanero.svg' %}" style="height: 2rem; width: 2rem;" />
+				      <small>Sauce name</small>
+				    </div>
+					</div>
+          <div class="w-100 d-none my-0 d-sm-block my-sm-3 d-md-block my-md-3 d-lg-none my-lg-0"></div>
+					<div class="card">
+					  <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+					  <div class="card-body">
+					    <h5 class="card-title">Recipe Name</h5>
+					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<button type="button" class="btn btn-primary">
+								View recipe
+							</button>
+					  </div>
+				    <div class="card-footer">
+							<img src="{% static 'core/images/el-isleno.svg' %}" style="height: 2rem; width: 2rem;" />
+				      <small>Sauce name</small>
+				    </div>
+					</div>
+          <div class="w-100 d-none my-0 d-sm-none my-sm-0 d-md-none my-md-0 d-lg-none my-lg-0"></div>
+					<div class="card">
+					  <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+					  <div class="card-body">
+					    <h5 class="card-title">Recipe Name</h5>
+					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<button type="button" class="btn btn-primary">
+								View recipe
+							</button>
+					  </div>
+				    <div class="card-footer">
+							<img src="{% static 'core/images/el-baquero.svg' %}" style="height: 2rem; width: 2rem;" />
+				      <small>Sauce name</small>
+				    </div>
+					</div>
+				</div>
+      </div>
+    </div>
+	</div>
+</section>
+{% endblock %}

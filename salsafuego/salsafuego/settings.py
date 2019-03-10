@@ -31,9 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'accessories.apps.AccessoriesConfig',
-    'apparel.apps.ApparelConfig',
+    # 'accessories.apps.AccessoriesConfig',
+    # 'apparel.apps.ApparelConfig',
     'core.apps.CoreConfig',
+    'merch.apps.MerchConfig',
     'products.apps.ProductsConfig',
     'recipes.apps.RecipesConfig',
     'django.contrib.admin',

@@ -10582,16 +10582,6 @@ h1, h2, h3, h4, h5, h6,
   color: #fffef9;
 }
 
-.bg-dark {
-  background-color: #007660 !important;
-}
-
-a.bg-dark:hover, a.bg-dark:focus,
-button.bg-dark:hover,
-button.bg-dark:focus {
-  background-color: #5b9d7a !important;
-}
-
 .carousel-caption {
   color: #fffef9;
 }
@@ -11207,11 +11197,6 @@ select.form-control:focus::-ms-value {
   bottom: 0;
 }
 
-.content-wrapper {
-  padding-bottom: 5rem;
-  padding-top: 2rem;
-}
-
 h1, .h1 {
   font-size: 2rem;
 }
@@ -11263,6 +11248,14 @@ h1, .h1 {
 }
 html {
   font-size: 1rem;
+}
+
+.jumbotron {
+  background-color: inherit;
+}
+
+.jumbotron-fluid {
+  padding: 0;
 }
 
 /*# sourceMappingURL=bootstrap-override.css.map */

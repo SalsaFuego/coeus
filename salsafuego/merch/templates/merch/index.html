@@ -1,0 +1,273 @@
+{% extends "../core/layout.html" %}
+
+{% load static %}
+
+{% block title %}
+Salsa Fuego - Merch
+{% endblock %}
+
+{% block body %}
+<section id="breadcrumb">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <ul>
+          <li>
+            <a href="{% url 'index' %}">Home</a>
+          </li>
+          <li>
+            <a href="#">Merch</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <img src="https://via.placeholder.com/1600x900/FFFF00/000000" alt="" />
+    </div>
+  </div>
+</section>
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+        <h1>Merch</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis convallis magna, sit amet accumsan lorem. Nam ornare augue ac velit dignissim consequat. Pellentesque facilisis auctor eros, vitae blandit magna pharetra a. Aliquam aliquet iaculis erat, eu placerat elit congue quis. Nam in risus at justo tristique vulputate at quis nibh. Aliquam semper felis nibh, sit amet interdum nunc porta vel. Sed vel condimentum nisi, a gravida est. Nullam tristique metus lorem.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container">
+		<div class="row">
+      <!-- Begin Filter Column -->
+			<div class="col-12 col-md-3">
+        <div id="product-filter" class="row">
+          <!-- Filter A -->
+          <div class="col-6 col-md-12">
+            <div class="filter-title">
+              <h3>Filter Title</h3>
+            </div>
+            <div class="filter-options">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="filterOption1">
+                <label class="form-check-label" for="filterOption1">
+                  Filter option 1
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="filterOption2">
+                <label class="form-check-label" for="filterOption2">
+                  Filter option 2
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="filterOption3">
+                <label class="form-check-label" for="filterOption3">
+                  Filter option 3
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="filterOption4">
+                <label class="form-check-label" for="filterOption4">
+                  Filter option 4
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="filterOption5" disabled>
+                <label class="form-check-label" for="filterOption5">
+                  Filter option 5
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- Filter B -->
+          <div class="col-6 col-md-12">
+            <div class="filter-title">
+              <h3>Filter Title</h3>
+            </div>
+            <div class="filter-options">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="filterOption1">
+                <label class="form-check-label" for="filterOption1">
+                  Filter option 1
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="filterOption2">
+                <label class="form-check-label" for="filterOption2">
+                  Filter option 2
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="filterOption3">
+                <label class="form-check-label" for="filterOption3">
+                  Filter option 3
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="filterOption4">
+                <label class="form-check-label" for="filterOption4">
+                  Filter option 4
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="filterOption5" disabled>
+                <label class="form-check-label" for="filterOption5">
+                  Filter option 5
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+      <!-- End Filter Column -->
+      <!-- Begin Product Column -->
+			<div class="col-12 col-md-9">
+        <!-- 3+ Returned Objects -->
+        <div class="row">
+          <div class="col">
+            <h3>Optional Heading</h3>
+          </div>
+        </div>
+  			<div class="row">
+          <div class="col">
+            <div class="card-deck">
+              <!-- 1st Card -->
+    					<div class="card">
+    					  <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+    					  <div class="card-body">
+    					    <h5 class="card-title">Merch Name</h5>
+    					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h5 style="margin: 0; padding: 0;">$19.99</h5>
+      							<button type="button" class="btn btn-primary">
+      								Details
+      							</button>
+                  </div>
+    					  </div>
+    					</div>
+              <!-- Dynamic Spacer A -->
+              <div class="d-none my-0 d-sm-block my-sm-3 d-lg-none my-lg-0 w-100"></div>
+              <!-- 2nd Card -->
+    					<div class="card">
+    					  <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+    					  <div class="card-body">
+    					    <h5 class="card-title">Recipe Name</h5>
+    					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    							<button type="button" class="btn btn-primary">
+    								View recipe
+    							</button>
+    					  </div>
+    				    <div class="card-footer">
+    							<img src="{% static 'core/images/el-bucanero.svg' %}" style="height: 2rem; width: 2rem;" />
+    				      <small>Sauce name</small>
+    				    </div>
+    					</div>
+              <!-- Dynamic Spacer B -->
+              <div class="d-none my-0 d-sm-block my-sm-3 d-lg-none my-lg-0 w-100"></div>
+              <!-- 3rd Card -->
+    					<div class="card">
+    					  <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+    					  <div class="card-body">
+    					    <h5 class="card-title">Recipe Name</h5>
+    					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    							<button type="button" class="btn btn-primary">
+    								View recipe
+    							</button>
+    					  </div>
+    				    <div class="card-footer">
+    							<img src="{% static 'core/images/el-isleno.svg' %}" style="height: 2rem; width: 2rem;" />
+    				      <small>Sauce name</small>
+    				    </div>
+    					</div>
+    				</div>
+          </div>
+  			</div>
+        <!-- 2 Returned Objects -->
+        <div class="row">
+          <div class="col">
+            <h3>Optional Heading</h3>
+          </div>
+        </div>
+  			<div class="row">
+          <div class="col-12 col-lg-8">
+            <div class="card-deck">
+              <!-- 1st Card -->
+    					<div class="card">
+    					  <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+    					  <div class="card-body">
+    					    <h5 class="card-title">Recipe Name</h5>
+    					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus finibus mi, quis euismod diam euismod id.</p>
+    							<button type="button" class="btn btn-primary">
+    								View recipe
+    							</button>
+    					  </div>
+    				    <div class="card-footer">
+    							<img src="{% static 'core/images/el-mariachi.svg' %}" style="height: 2rem; width: 2rem;" />
+    				      <small>Sauce name</small>
+    				    </div>
+    					</div>
+              <!-- Dynamic Spacer A -->
+              <div class="d-none my-0 d-sm-block my-sm-3 d-lg-none my-lg-0 w-100"></div>
+              <!-- 2nd Card -->
+    					<div class="card">
+    					  <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+    					  <div class="card-body">
+    					    <h5 class="card-title">Recipe Name</h5>
+    					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    							<button type="button" class="btn btn-primary">
+    								View recipe
+    							</button>
+    					  </div>
+    				    <div class="card-footer">
+    							<img src="{% static 'core/images/el-bucanero.svg' %}" style="height: 2rem; width: 2rem;" />
+    				      <small>Sauce name</small>
+    				    </div>
+    					</div>
+    				</div>
+          </div>
+  			</div>
+        <!-- 1 Returned Object1 -->
+        <div class="row">
+          <div class="col">
+            <h3>Optional Heading</h3>
+          </div>
+        </div>
+  			<div class="row">
+          <div class="col-12 col-lg-4">
+            <div class="card-deck">
+              <!-- 1st Card -->
+    					<div class="card">
+    					  <img class="card-img-top" src="https://via.placeholder.com/400x300" alt="">
+    					  <div class="card-body">
+    					    <h5 class="card-title">Recipe Name</h5>
+    					    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus finibus mi, quis euismod diam euismod id.</p>
+    							<button type="button" class="btn btn-primary">
+    								View recipe
+    							</button>
+    					  </div>
+    				    <div class="card-footer">
+    							<img src="{% static 'core/images/el-mariachi.svg' %}" style="height: 2rem; width: 2rem;" />
+    				      <small>Sauce name</small>
+    				    </div>
+    					</div>
+    				</div>
+          </div>
+  			</div>
+			</div>
+      <!-- End Product Column -->
+		</div>
+	</div>
+</section>
+{% endblock %}

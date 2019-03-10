@@ -37,108 +37,144 @@
 
 <body>
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-	<div class="container">
-		<a class="navbar-brand" href="#">
-			<img src="{% static 'core/images/salsa-fuego-logo-light.svg' %}" width="140" height="auto" />
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-				<li id="index" class="nav-item">
-					<a class="nav-link" href="#">
-						Home
-					</a>
-				</li>
-				<li id="flavors" class="nav-item">
-					<a class="nav-link" href="#">
-						Flavors
-					</a>
-				</li>
-				<li class="nav-item dropdown">
-			    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">About</a>
-			    <div class="dropdown-menu">
-			      <a class="dropdown-item" href="#">Our story</a>
-			      <a id="contact" class="dropdown-item" href="#">Contact us</a>
-			      <a class="dropdown-item" href="#">News</a>
-			    </div>
-				</li>
-				<li id="shop" class="nav-item dropdown">
-			    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Shop</a>
-			    <div class="dropdown-menu">
-			      <a class="dropdown-item" href="#">Find a product</a>
-			      <a class="dropdown-item" href="#">Buy online</a>
-			    </div>
-				</li>
-			</ul>
-		</div>
-	</div>
-</nav>
-
-{% block body %}
-{% endblock %}
-
-<!-- Footer Content -->
-<footer class="width-100">
-	<div class="container">
-		<div class="align-items-start row d-flex">
-			<div class="col-lg-5 col-sm-6 mb-4 mt-3 text-center">
-				<h6>CONTACT US</h6>
-				<p>Email us anytime at <a href="mailto:info@salsafuego.com">info@salsafuego.com</a></p>
-			</div>
-			<div class="col-lg-2 col-sm-6 mb-4 mt-0 mt-sm-3 text-center">
-				<h6>FOLLOW US</h6>
-				<a href="#" target="_blank" class="mx-1">
-					<img src="{% static 'core/images/facebook-icon-black.svg' %}" style="height: 30px; width: 30px;" />
-				</a>
-				<a href="#" target="_blank" class="mx-1">
-					<img src="{% static 'core/images/instagram-icon-black.svg' %}" style="height: 30px; width: 30px;" />
-				</a>
-				<a href="#" target="_blank" class="mx-1">
-					<img src="{% static 'core/images/twitter-icon-black.svg' %}" style="height: 30px; width: 30px;" />
-				</a>
-			</div>
-			<div class="col-lg-5 mb-4 mt-0 mt-lg-3 text-center">
-				<h6>GET 10% OFF YOUR FIRST ORDER!</h6>
-				<div class="d-flex justify-content-center">
-					<!-- ||| Begin MailChimp Signup Form -->
-					<form action="https://salsafuego.us18.list-manage.com/subscribe/post?u=89736b8c78dd13f0ac8dd7d95&amp;id=ddbc4dd010" method="post" target="_blank" class="form-inline">
-						<div class="d-flex flex-nowrap">
-							<!-- Hidden field to prevent bot signups -->
-							<div style="position: absolute; left: -5000px;" aria-hidden="true">
-								<input type="text" name="b_89736b8c78dd13f0ac8dd7d95_ddbc4dd010" tabindex="-1" value="">
-							</div>
-							<label class="sr-only" for="emailAddress">Email Address</label>
-							<input name="EMAIL" placeholder="Enter Email Address" type="email" id="emailAddress" class="form-control">
-							<button type="submit" class="btn btn-dark">SUBMIT</button>
-						</div>
-					</form>
-					<!--End MailChimp Signup Form ||| -->
+<header>
+	<!-- Tagline / Account Details -->
+	<section class="tagline-account-details">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 tagline">
+					<p>A different kind of sabor</p>
+				</div>
+				<div class="col-6 account-details">
+					<a href="#" title="Register">Register</a>
+					<a href="#" title="Log In">Log In</a>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col mb-4 text-center">
-				<p>
-					<a href="#" class="mx-2">FAQS</a>
-					<a href="#" class="mx-2">ABOUT US</a>
-					<a href="#" class="mx-2">SHOP</a>
-					<a href="#" class="mx-2">TERMS AND CONDITIONS</a>
-					<a href="#" class="mx-2">PRIVACY POLICY</a>
-				</p>
+	</section>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark primary">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="{% static 'core/images/salsa-fuego-logo-light.svg' %}" width="140" height="auto" />
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li id="index" class="nav-item">
+						<a class="nav-link current-page" href="#">
+							Home
+						</a>
+					</li>
+					<li id="flavors" class="nav-item">
+						<a class="nav-link" href="#">
+							Flavors
+						</a>
+					</li>
+					<li id="recipes" class="nav-item">
+						<a class="nav-link" href="#">
+							Recipes
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">About</a>
+				    <div class="dropdown-menu  dropdown-menu-right">
+				      <a class="dropdown-item" href="#">Our Story</a>
+				      <a class="dropdown-item" href="#">News and Updates</a>
+				      <a id="contact" class="dropdown-item" href="#">Contact Us</a>
+				    </div>
+					</li>
+				</ul>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col mb-4 text-center">
-				<p>
-					&copy; 2018 Salsa Fuego, LLC
-				</p>
+	</nav>
+</header>
+
+<main>
+{% block body %}
+{% endblock %}
+</main>
+
+<footer>
+	<!-- Contact / Social / Newsletter -->
+	<section class="contact-social-newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-sm-7 col-lg-5 contact">
+					<h6>CONTACT US</h6>
+					<p>Email us anytime at <a href="mailto:info@salsafuego.com">info@salsafuego.com</a></p>
+				</div>
+				<div class="col-12 col-sm-5 col-lg-2 social">
+					<h6>FOLLOW US</h6>
+					<a href="#" target="_blank">
+						<img src="{% static 'core/images/facebook-icon-white.svg' %}" style="height: 30px; width: 30px;" />
+					</a>
+					<a href="#" target="_blank">
+						<img src="{% static 'core/images/instagram-icon-white.svg' %}" style="height: 30px; width: 30px;" />
+					</a>
+					<a href="#" target="_blank">
+						<img src="{% static 'core/images/twitter-icon-white.svg' %}" style="height: 30px; width: 30px;" />
+					</a>
+				</div>
+				<div class="col-12 col-lg-5 newsletter">
+					<h6>GET 10% OFF YOUR FIRST ORDER!</h6>
+					<div class="d-flex justify-content-center">
+						<!-- ||| Begin MailChimp Signup Form -->
+						<form action="https://salsafuego.us18.list-manage.com/subscribe/post?u=89736b8c78dd13f0ac8dd7d95&amp;id=ddbc4dd010" method="post" target="_blank" class="form-inline">
+							<div class="d-flex flex-nowrap">
+								<!-- Hidden field to prevent bot signups -->
+								<div style="position: absolute; left: -5000px;" aria-hidden="true">
+									<input type="text" name="b_89736b8c78dd13f0ac8dd7d95_ddbc4dd010" tabindex="-1" value="">
+								</div>
+								<label class="sr-only" for="emailAddress">Email Address</label>
+								<input name="EMAIL" placeholder="Enter Email Address" type="email" id="emailAddress" class="form-control">
+								<button type="submit" class="btn btn-dark">SUBMIT</button>
+							</div>
+						</form>
+						<!--End MailChimp Signup Form ||| -->
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
+	<!-- Secondary Navigation -->
+	<nav class="secondary">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<ul>
+						<li>
+							<a href="#">FAQS</a>
+						</li>
+						<li>
+							<a href="#">ABOUT US</a>
+						</li>
+						<li>
+							<a href="#">SHOP</a>
+						</li>
+						<li>
+							<a href="#">TERMS AND CONDITIONS</a>
+						</li>
+						<li>
+							<a href="#">PRIVACY POLICY</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- Copyright -->
+	<section class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p>&copy; <script>document.write(new Date().getFullYear())</script> Salsa Fuego, LLC</p>
+				</div>
+			</div>
+		</div>
+	</section>
 </footer>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -151,7 +187,7 @@
 
 <!-- Salsa Fuego JS -->
 <script src="{% static 'core/js/bootstrap-override.js' %}" type="text/javascript"></script>
-<script src="{% static 'core/js/salsa-fuego.js' %}" type="text/javascript"></script>
+<!-- <script src="{% static 'core/js/salsa-fuego.js' %}" type="text/javascript"></script> -->
 
 </body>
 

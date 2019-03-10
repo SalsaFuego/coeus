@@ -5,29 +5,23 @@ body {
 
 a,
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6,
 label,
 li,
 ol,
 p,
 ul {
-  color: #fffef9;
+  color: #231f20;
+}
+a a:hover,
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,
+label a:hover,
+li a:hover,
+ol a:hover,
+p a:hover,
+ul a:hover {
+  color: #333132;
 }
 
-@media (min-width: 992px) {
-  .current-page {
-    position: relative;
-  }
-  .current-page:after {
-    content: "";
-    position: absolute;
-    top: 77%;
-    height: 2px;
-    width: 88%;
-    left: 6%;
-    background-color: #fffef9;
-  }
-}
 .width-5 {
   width: 5%;
 }
@@ -106,12 +100,6 @@ ul {
 
 .width-100 {
   width: 100%;
-}
-
-.nav-item {
-  font-family: "Bevan", cursive;
-  font-size: 1.25rem;
-  letter-spacing: 0.05rem;
 }
 
 .torn-paper-effect {
@@ -206,21 +194,137 @@ ul {
   text-shadow: 0 0 0 #fffef9;
 }
 
-footer {
-  background-color: #f2dfc3;
+header .tagline-account-details {
+  font-size: 0.75rem;
+  margin: 0.5rem 0;
 }
-footer a,
-footer h1, footer h2, footer h3, footer h4, footer h5, footer h6,
-footer p {
-  color: #231f20;
+header .tagline-account-details .tagline {
+  text-align: left;
 }
-footer a:hover {
-  color: #333132;
+header .tagline-account-details .tagline p {
+  margin: 0;
+  padding: 0;
 }
-footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+header .tagline-account-details .account-details {
+  text-align: right;
+}
+header .tagline-account-details .account-details a:first-child {
+  margin-right: 0.5rem;
+}
+header .tagline-account-details .account-details a:last-child {
+  margin-left: 0.5rem;
+}
+header nav.primary {
+  background-color: #007660;
+}
+header nav.primary .nav-item {
+  font-family: "Bevan", cursive;
+  font-size: 1.25rem;
+  letter-spacing: 0.05rem;
+}
+@media (min-width: 992px) {
+  header nav.primary .nav-item .current-page {
+    position: relative;
+  }
+  header nav.primary .nav-item .current-page:after {
+    content: "";
+    position: absolute;
+    top: 77%;
+    height: 2px;
+    width: 88%;
+    left: 6%;
+    background-color: #fffef9;
+  }
+}
+footer .contact-social-newsletter {
+  background-color: #007660;
+  padding: 1.5rem 0;
+}
+footer .contact-social-newsletter a {
+  color: #fffef9;
+}
+footer .contact-social-newsletter a:hover {
+  color: #fffef9;
+}
+footer .contact-social-newsletter h1, footer .contact-social-newsletter h2, footer .contact-social-newsletter h3, footer .contact-social-newsletter h4, footer .contact-social-newsletter h5, footer .contact-social-newsletter h6 {
+  color: #fffef9;
   margin: 0 0 0.5rem;
 }
-footer p {
+footer .contact-social-newsletter p {
+  color: #fffef9;
+  font-size: 0.875rem;
+  margin: 0;
+}
+footer .contact-social-newsletter .contact {
+  text-align: center;
+  line-height: auto;
+}
+footer .contact-social-newsletter .contact a:hover {
+  text-decoration: underline;
+}
+@media (min-width: 576px) {
+  footer .contact-social-newsletter .contact {
+    line-height: 38px;
+  }
+}
+footer .contact-social-newsletter .social {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+footer .contact-social-newsletter .social a:hover {
+  text-decoration: none;
+}
+footer .contact-social-newsletter .social img {
+  margin: 0 0.25rem;
+}
+@media (min-width: 576px) {
+  footer .contact-social-newsletter .social {
+    margin: 0;
+  }
+  footer .contact-social-newsletter .social img {
+    margin: 0.25rem;
+  }
+}
+footer .contact-social-newsletter .newsletter {
+  margin-top: 0;
+  text-align: center;
+}
+@media (min-width: 576px) {
+  footer .contact-social-newsletter .newsletter {
+    margin-top: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  footer .contact-social-newsletter .newsletter {
+    margin-top: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  footer .contact-social-newsletter .newsletter {
+    margin-top: 0;
+  }
+}
+footer nav.secondary {
+  text-align: center;
+}
+footer nav.secondary ul {
+  font-size: 0.75rem;
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+footer nav.secondary ul li {
+  display: inline;
+}
+footer nav.secondary ul li a {
+  margin: 0 0.5rem;
+}
+footer .copyright {
+  margin: 0 0 1rem;
+  padding: 0;
+  text-align: center;
+}
+footer .copyright p {
   font-size: 0.75rem;
   margin: 0;
 }
@@ -328,6 +432,220 @@ footer p {
   .custom-carousel-content div h1 {
     font-size: 2.5rem;
   }
+}
+#product-filter {
+  border: none;
+  width: auto;
+}
+@media (min-width: 768px) {
+  #product-filter {
+    border-right: 1px solid #231f20;
+  }
+}
+#product-filter .filter-title {
+  padding: 0;
+}
+#product-filter .filter-title ~ .filter-title {
+  padding: 2rem 0 0;
+}
+
+.product-tile {
+  padding: 0 0 15px;
+}
+.product-tile img {
+  width: 100%;
+}
+.product-tile h5 {
+  margin: 0;
+  padding: 15px 0 0;
+}
+.product-tile p {
+  margin: 0;
+  padding: 15px 0 0;
+}
+
+#product-image img {
+  width: 100%;
+}
+
+#product-details #product-name {
+  margin-bottom: 0.5rem;
+}
+#product-details #product-price {
+  margin-bottom: 2rem;
+}
+#product-details #product-price h3 {
+  color: #333132;
+}
+#product-details #product-variants {
+  margin-bottom: 0.5rem;
+}
+#product-details #product-quantity {
+  margin-bottom: 2rem;
+}
+#product-details #product-quantity input {
+  max-width: 4rem;
+  width: 100%;
+}
+#product-details #product-button {
+  margin-bottom: 2rem;
+}
+#product-details #product-accordion .card {
+  background-color: #fffef9;
+  border: 1px solid rgba(35, 31, 32, 0.25);
+  border-radius: 0;
+}
+#product-details #product-accordion .card .card-header {
+  background-color: rgba(35, 31, 32, 0.125);
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+#product-details #product-accordion .card .card-header h5 {
+  margin: 0;
+  padding: 0;
+}
+#product-details #product-accordion .card .card-header h5 .btn {
+  border: 0;
+  margin: 0;
+  padding: 1.25rem;
+}
+#product-details #product-accordion .card .card-header h5 .btn:focus {
+  box-shadow: none;
+}
+#product-details #product-accordion .card .card-header h5 .btn-link {
+  color: #231f20;
+}
+#product-details #product-accordion .card .card-body {
+  border-top: 1px solid rgba(35, 31, 32, 0.25);
+  margin: 0;
+  padding: 1.25rem;
+}
+#product-details #product-accordion #product-description p {
+  margin: 0;
+  padding: 0;
+}
+#product-details #product-accordion #product-ingredients ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#product-details #product-accordion #product-nutrition-facts ul {
+  list-style: none;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  width: 100%;
+}
+#product-details #product-accordion #product-nutrition-facts ul li span {
+  background: white;
+}
+#product-details #product-accordion #product-nutrition-facts ul li span:first-child {
+  padding-right: 0.5rem;
+}
+#product-details #product-accordion #product-nutrition-facts ul li span:last-child {
+  float: right;
+  padding-left: 0.5rem;
+}
+#product-details #product-accordion #product-nutrition-facts ul li:not(.nested):before {
+  content: " . . . . . . . . . . . . . . . . . . . ." " . . . . . . . . . . . . . . . . . . . ." " . . . . . . . . . . . . . . . . . . . ." " . . . . . . . . . . . . . . . . . . . .";
+  float: left;
+  white-space: nowrap;
+  width: 0;
+}
+#product-details #product-accordion #product-nutrition-facts ul li.nested ul {
+  list-style: none;
+  padding: 0 0 0 1.25rem;
+}
+
+.hero img {
+  width: 100%;
+}
+
+.recipe-details .servings,
+.recipe-details .prep-time,
+.recipe-details .cook-time {
+  display: inline-block;
+}
+.recipe-details .servings img,
+.recipe-details .prep-time img,
+.recipe-details .cook-time img {
+  display: inline-block;
+  max-height: 1.5rem;
+  max-width: 1.5rem;
+  width: 100%;
+}
+.recipe-details .servings p,
+.recipe-details .prep-time p,
+.recipe-details .cook-time p {
+  display: inline-block;
+  margin: 0 0 0 0.125rem;
+  line-height: 1.5rem;
+  padding: 0;
+}
+.recipe-details .servings p span,
+.recipe-details .prep-time p span,
+.recipe-details .cook-time p span {
+  font-weight: 700;
+}
+.recipe-details .prep-time,
+.recipe-details .cook-time {
+  margin-left: 1rem;
+}
+
+.print-recipe img {
+  display: inline-block;
+  max-height: 1.5rem;
+  max-width: 1.5rem;
+  width: 100%;
+}
+.print-recipe a {
+  color: #231f20;
+  display: inline-block;
+  margin: 0 0 0 0.125rem;
+  line-height: 1.5rem;
+}
+.print-recipe a:hover {
+  color: #333132;
+}
+
+.ingredients-preparation .ingredients ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ingredients-preparation .ingredients ul li {
+  border-top: none;
+  padding: 0.5rem 0;
+}
+.ingredients-preparation .ingredients ul li ~ li {
+  border-top: 1px solid rgba(35, 31, 32, 0.25);
+}
+.ingredients-preparation .associated-product .product-label img {
+  width: 100%;
+}
+#breadcrumb {
+  padding: 1rem 0;
+}
+#breadcrumb ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#breadcrumb ul li {
+  display: inline;
+}
+#breadcrumb ul li a {
+  color: rgba(35, 31, 32, 0.625);
+}
+#breadcrumb ul li:last-child a {
+  color: #231f20;
+}
+#breadcrumb ul li + li:before {
+  content: "/";
+  display: inline;
+  margin: 0 0.25rem;
 }
 
 /*# sourceMappingURL=salsa-fuego.css.map */
